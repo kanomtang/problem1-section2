@@ -1,5 +1,12 @@
 <form class="container">
-  <div class="first-col">col-1</div>
+  <div class="first-col">
+    <mat-form-field class="full-width" appearance="fill">
+      <input matInput type="text" placeholder="Input number" 
+      pattern="[0-9.]+"
+      [value]="inputNumber" (blur)='onBlurInputNumber($event)'>
+    </mat-form-field>
+  </div>
+  
   <div class="second-col">col-2</div>
   <div class="third-col">col-3</div>
 </form>
