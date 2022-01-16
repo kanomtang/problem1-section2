@@ -1,0 +1,33 @@
+.container {
+    display: grid;
+    grid-template-columns: 200px minmax(100px, 1fr) 300px
+}
+@media screen and (max-width: 600px) {
+    .container {
+        overflow-x: scroll;
+    }
+}
+
+.first-col {
+    background-color: #96CEB4;
+}
+.second-col {
+    background-color: #FFEEAD;
+}
+.third-col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #D9534F;
+}
+
+  
+.full-width {
+    width: 100%;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
