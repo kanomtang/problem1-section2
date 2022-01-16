@@ -7,6 +7,15 @@
     </mat-form-field>
   </div>
   
-  <div class="second-col">col-2</div>
+  <div class="second-col">
+    <mat-form-field appearance="fill" class="full-width">
+    <mat-select [(value)]="mathematicSelected">
+      <mat-option *ngFor="let option of mathematicsOption" [value]="option.value">
+        {{option.text}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  </div>
+
   <div class="third-col">col-3</div>
 </form>

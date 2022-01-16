@@ -10,6 +10,13 @@ export class AppComponent {
 
   // Data
   inputNumber: number = null
+  mathematicSelected: string = 'Prime'
+
+  // Options select
+  mathematicsOption = [
+    {text: 'isPrime', value: 'Prime'},
+    {text: 'isFibonacci', value: 'fibonacci'},
+  ]
 
   // Function
   onBlurInputNumber(event) {
