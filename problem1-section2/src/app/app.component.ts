@@ -11,6 +11,7 @@ export class AppComponent {
   // Data
   inputNumber: number = null
   mathematicSelected: string = 'Prime'
+  calculatedResult: boolean = false
 
   // Options select
   mathematicsOption = [
@@ -26,6 +27,36 @@ export class AppComponent {
     } else {
       this.inputNumber = Math.round(numberFromInputField)
     }
-    // TODO: Update result value
+    this.calculateResult()
+  }
+
+  // Prime number function
+  isPrime() {
+    for(let i = 2, s = Math.sqrt(this.inputNumber); i <= s; i++)
+        if(this.inputNumber % i === 0) return false; 
+    return this.inputNumber > 1;
+  }
+
+  // Fibonacci number function
+  isFibonacci() {
+    let a = (5 * Math.pow( this.inputNumber, 2) + 4),
+        b = (5 * Math.pow( this.inputNumber, 2) - 4)
+  
+    var leftSideResult = Math.sqrt(a) % 1 == 0,
+    rightSideResult = Math.sqrt(b) % 1 == 0;
+  
+    return (leftSideResult || rightSideResult == true)
+  }
+
+  calculateResult() {
+    if (this.mathematicSelected === 'Prime') {
+      this.calculatedResult = this.isPrime()
+    } else {
+      this.calculatedResult = this.isFibonacci()
+    }
+  }
+
+  get result() {
+    return this.calculatedResult
   }
 }
