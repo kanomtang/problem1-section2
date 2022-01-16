@@ -17,7 +17,7 @@ export class AppComponent {
     if (numberFromInputField < 0) {
       this.inputNumber = 1
     } else {
-      this.inputNumber = Math.floor(numberFromInputField)
+      this.inputNumber = Math.round(numberFromInputField)
     }
     // TODO: Update result value
   }
