@@ -2,19 +2,14 @@
 
   <div class="first-col">
     <mat-form-field class="full-width" appearance="fill">
-      <input matInput
-      type="text"
-      placeholder="Input number" 
-      pattern="[0-9.]+"
-      [value]="inputNumber"
-      (blur)='onBlurInputNumber($event)'>
+      <input matInput type="text" placeholder="Input number" pattern="[0-9.]+" [value]="inputNumber"
+        (blur)='onBlurInputNumber($event)'>
     </mat-form-field>
   </div>
 
   <div class="second-col">
     <mat-form-field appearance="fill" class="full-width">
-      <mat-select [(value)]="mathematicSelected"
-      (selectionChange)="calculateResult()">
+      <mat-select [(value)]="mathematicSelected" (selectionChange)="calculateResult()">
         <mat-option *ngFor="let option of mathematicsOption" [value]="option.value">
           {{option.text}}
         </mat-option>
@@ -25,5 +20,5 @@
   <div class="third-col">
     {{ this.result}}
   </div>
-  
+
 </form>
