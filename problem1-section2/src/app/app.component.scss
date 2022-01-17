@@ -13,7 +13,11 @@
         overflow-x: scroll;
     }
 }
-
+.col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .first-col {
     background-color: #96ceb4;
 }
@@ -21,7 +25,7 @@
     background-color: #ffeead;
 }
 .third-col {
-    background-color: #d9534f;
+    background-color: #D9534F;
 }
 
 .full-width {
